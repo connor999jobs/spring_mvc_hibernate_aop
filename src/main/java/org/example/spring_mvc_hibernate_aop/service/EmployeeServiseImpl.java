@@ -16,7 +16,6 @@ public class EmployeeServiseImpl implements EmployeeServise{
 
     @Override
     @Transactional
-
     public List<Employee> getAllEmployees() {
         return employeeDao.getAllEmployees();
     }
@@ -25,5 +24,19 @@ public class EmployeeServiseImpl implements EmployeeServise{
     @Transactional
     public void saveEmployee(Employee employee) {
         employeeDao.saveEmployee(employee);
+    }
+
+
+    @Override
+    @Transactional
+    public Employee getEmployee(int id) {
+        return employeeDao.getEmployee(id);
+    }
+
+    @Override
+    @Transactional
+    public void deleteEmployee(int id) {
+      employeeDao.deleteEmployee(id);
+
     }
 }
